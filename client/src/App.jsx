@@ -1,15 +1,35 @@
 import { useEffect, useState } from 'react';
 import { Routes, Route, NavLink } from 'react-router-dom';
+import portfolioData from './portfolioData';
 
 function App() {
   const [data, setData] = useState(null);
   const [formStatus, setFormStatus] = useState(null);
+  const isGitHubPages =
+    typeof window !== 'undefined' && window.location.hostname.endsWith('github.io');
 
   useEffect(() => {
-    fetch('/api/portfolio')
-      .then((res) => res.json())
-      .then((json) => setData(json));
-  }, []);
+    async function loadPortfolio() {
+      if (isGitHubPages) {
+        setData(portfolioData);
+        return;
+      }
+
+      try {
+        const res = await fetch('/api/portfolio');
+        if (!res.ok) {
+          throw new Error(`Request failed with ${res.status}`);
+        }
+        const json = await res.json();
+        setData(json);
+      } catch (_error) {
+        // Fallback for static hosting or temporary API failures.
+        setData(portfolioData);
+      }
+    }
+
+    loadPortfolio();
+  }, [isGitHubPages]);
 
   if (!data) {
     return <div className="loading">Cargando portfolio...</div>;
@@ -20,15 +40,31 @@ function App() {
     const formData = new FormData(e.target);
     const payload = Object.fromEntries(formData.entries());
 
-    const res = await fetch('/api/contact', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload)
-    });
+    if (isGitHubPages) {
+      setFormStatus({
+        success: true,
+        message: 'Gracias por tu mensaje. En esta versión estática de GitHub Pages el envío está deshabilitado.'
+      });
+      e.target.reset();
+      return;
+    }
 
-    const result = await res.json();
-    setFormStatus(result);
-    e.target.reset();
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      const result = await res.json();
+      setFormStatus(result);
+      e.target.reset();
+    } catch (_error) {
+      setFormStatus({
+        success: false,
+        message: 'No se pudo enviar el mensaje en este momento.'
+      });
+    }
   };
 
   return (
@@ -90,7 +126,7 @@ function Home({ data }) {
           </div>
           <div className="hero-image-wrap">
             <div className="image-ring">
-              <img src="/profile.jpg" alt="Foto de perfil" className="profile-image" />
+              <div className="profile-image" aria-label="Foto de perfil">GS</div>
             </div>
           </div>
         </div>
