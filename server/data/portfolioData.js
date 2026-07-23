@@ -23,7 +23,7 @@ const portfolioData = {
       description: 'Portfolio desarrollado con Flask y Bootstrap',
       technologies: ['Python', 'Flask', 'Bootstrap', 'Git'],
       github_url: 'https://github.com/GabrielSilva-A/Porfolio-flask',
-      demo_url: 'https://gabrielsilva-a.github.io/Porfolio-flask/',
+      demo_url: 'https://porfolio-react-zh4v.onrender.com/',
       image: 'project1.jpg'
     },
     {
