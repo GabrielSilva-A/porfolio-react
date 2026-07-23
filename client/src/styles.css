@@ -167,6 +167,15 @@ a { text-decoration: none; color: inherit; }
 .projects-section { background: rgba(255,255,255,0.03); }
 .projects-grid, .education-grid, .experience-grid, .about-grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
 .education-grid { padding-block: inherit; }
+.about-card {
+  padding: 1.6rem 1.8rem;
+}
+.about-card h3 {
+  margin-bottom: 1rem;
+}
+.about-card p {
+  margin: 0.7rem 0;
+}
 .modern-card {
   background: var(--card-bg);
   border-radius: 22px;

@@ -88,7 +88,11 @@ function Home({ data }) {
           </div>
           <div className="hero-image-wrap">
             <div className="image-ring">
-              <div className="profile-image" aria-label="Foto de perfil">GS</div>
+              <img
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
+                alt="Foto de perfil"
+                className="profile-image"
+              />
             </div>
           </div>
         </div>
