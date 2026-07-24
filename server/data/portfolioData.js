@@ -30,7 +30,7 @@ const portfolioData = {
       title: 'Sistema de Gestión de Tareas',
       description: 'Aplicación full stack para gestionar tareas por usuario con autenticación JWT y persistencia en PostgreSQL, desplegada en Render.',
       technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'Render'],
-      github_url: 'https://porfolio-react-zh4v.onrender.com/',
+      github_url: 'https://gestion-de-tareas-pc6r.onrender.com',
       demo_url: '#',
       image: 'project2.jpg'
     }
