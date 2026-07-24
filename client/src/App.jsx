@@ -283,8 +283,15 @@ function Contact({ data, onSubmit, formStatus }) {
         <div className="modern-card contact-card">
           <h3>Información de contacto</h3>
           <p><strong>Email:</strong> {data.email}</p>
-          <p><strong>Teléfono:</strong> {data.phone}</p>
           <p><strong>Ubicación:</strong> {data.location}</p>
+          <div className="buttons-row contact-links">
+            {data.social_links.linkedin && (
+              <a href={data.social_links.linkedin} target="_blank" rel="noreferrer" className="btn btn-outline">LinkedIn</a>
+            )}
+            {data.social_links.github && (
+              <a href={data.social_links.github} target="_blank" rel="noreferrer" className="btn btn-outline">GitHub</a>
+            )}
+          </div>
         </div>
 
         <form className="modern-card form-card" onSubmit={onSubmit}>

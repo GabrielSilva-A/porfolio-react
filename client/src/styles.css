@@ -192,6 +192,7 @@ a { text-decoration: none; color: inherit; }
 .tech-list { display: flex; flex-wrap: wrap; gap: 0.45rem; margin: 0.8rem 0; }
 .tech-list span { background: rgba(255,255,255,0.08); padding: 0.3rem 0.6rem; border-radius: 999px; font-size: 0.78rem; }
 .buttons-row { display: flex; gap: 0.6rem; margin-top: 1rem; flex-wrap: wrap; }
+.contact-links { flex-direction: column; align-items: flex-start; }
 
 .learning-timeline {
   position: relative;
@@ -280,8 +281,9 @@ a { text-decoration: none; color: inherit; }
 }
 .badge.success { background: #10b981; }
 
-.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1rem; }
+.contact-grid { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 1rem; align-items: start; }
 .contact-card, .form-card { padding: 1.2rem; }
+.contact-card { height: fit-content; }
 form { display: flex; flex-direction: column; gap: 0.8rem; }
 input, textarea { width: 100%; padding: 0.8rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.14); background: rgba(2,6,23,0.75); color: white; font: inherit; }
 input::placeholder, textarea::placeholder { color: #94a3b8; }

@@ -2,28 +2,28 @@ const portfolioData = {
   name: 'Gabriel Silva',
   title: 'Desarrollador Full Stack (Junior)',
   email: 'ags0014@gmail.com',
-  phone: '2475 - 414146',
   location: 'Rojas, Argentina',
   about:
     'Soy estudiante en Programación, mi mayor fortaleza es mi capacidad de aprendizaje y la adaptabilidad. Me tomo con entusiasmo cada nuevo desafío porque es la oportunidad perfecta para aprender algo nuevo.',
   skills: [
-    { name: 'Python', level: 'Intermedio', category: 'Backend', icon: 'fab fa-python' },
-    { name: 'Flask', level: 'Intermedio', category: 'Backend', icon: 'fas fa-flask' },
-    { name: 'JavaScript', level: 'Intermedio', category: 'Frontend', icon: 'fab fa-js-square' },
+    { name: 'React', level: 'Intermedio', category: 'Frontend', icon: 'fab fa-react' },
+    { name: 'Vite', level: 'Intermedio', category: 'Frontend', icon: 'fas fa-bolt' },
     { name: 'HTML/CSS', level: 'Intermedio', category: 'Frontend', icon: 'fab fa-html5' },
-    { name: 'Git', level: 'Básico', category: 'Herramientas', icon: 'fab fa-git-alt' },
-    { name: 'SQL', level: 'Básico', category: 'Base de Datos', icon: 'fas fa-database' },
-    { name: 'Bootstrap', level: 'Básico', category: 'Frontend', icon: 'fab fa-bootstrap' },
-    { name: 'Node.js', level: 'Básico', category: 'Backend', icon: 'fab fa-node-js' },
-    { name: 'Express', level: 'Avanzado', category: 'Backend', icon: 'fas fa-server' }
+    { name: 'Node.js', level: 'Intermedio', category: 'Backend', icon: 'fab fa-node-js' },
+    { name: 'Express', level: 'Intermedio', category: 'Backend', icon: 'fas fa-server' },
+    { name: 'JWT', level: 'Intermedio', category: 'Backend', icon: 'fas fa-key' },
+    { name: 'PostgreSQL', level: 'Intermedio', category: 'Base de Datos', icon: 'fas fa-database' },
+    { name: 'Render', level: 'Intermedio', category: 'Deploy', icon: 'fas fa-cloud' },
+    { name: 'Git', level: 'Intermedio', category: 'Herramientas', icon: 'fab fa-git-alt' },
+    { name: 'Nodemailer', level: 'Básico', category: 'Herramientas', icon: 'fas fa-envelope' }
   ],
   projects: [
     {
       title: 'Portfolio Personal',
-      description: 'Portfolio desarrollado con Flask y Bootstrap',
-      technologies: ['Python', 'Flask', 'Bootstrap', 'Git'],
-      github_url: 'https://github.com/GabrielSilva-A/Porfolio-flask',
-      demo_url: 'https://porfolio-react-zh4v.onrender.com/',
+      description: 'Portfolio full stack con React y Express para mostrar proyectos y recibir mensajes de contacto.',
+      technologies: ['React', 'Vite', 'Node.js', 'Express', 'Nodemailer', 'Render'],
+      github_url: 'https://porfolio-react-zh4v.onrender.com/',
+      demo_url: '#',
       image: 'project1.jpg'
     },
     {
@@ -33,22 +33,6 @@ const portfolioData = {
       github_url: 'https://porfolio-react-zh4v.onrender.com/',
       demo_url: '#',
       image: 'project2.jpg'
-    },
-    {
-      title: 'API REST',
-      description: 'API REST desarrollada con Flask',
-      technologies: ['Python', 'Flask', 'JWT', 'MongoDB'],
-      github_url: 'https://github.com/tuusuario/api-rest',
-      demo_url: '#',
-      image: 'project3.jpg'
-    },
-    {
-      title: 'Login y Register',
-      description: 'Interfaz de usuario para login y registro creada con React',
-      technologies: ['React', 'Node.js', 'Express', 'MongoDB'],
-      github_url: 'https://github.com/tuusuario/login-register',
-      demo_url: '#',
-      image: 'project4.jpg'
     }
   ],
   experience: [
