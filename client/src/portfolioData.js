@@ -28,9 +28,9 @@ const portfolioData = {
     },
     {
       title: 'Sistema de Gestión de Tareas',
-      description: 'Sistema para gestión de tareas y proyectos para la empresa Cargill',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'React'],
-      github_url: 'https://github.com/tuusuario/sistema-gestion',
+      description: 'Aplicación full stack para gestionar tareas por usuario con autenticación JWT y persistencia en PostgreSQL, desplegada en Render.',
+      technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'JWT', 'Render'],
+      github_url: 'https://porfolio-react-zh4v.onrender.com/',
       demo_url: '#',
       image: 'project2.jpg'
     },
